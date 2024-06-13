@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Results</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Search Results</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+                <th>Depth</th>
+                <th>Magnitude</th>
+                <th>Network</th>
+                <th>ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in entries %}
+            <tr>
+                <td>{{ entry['time'] }}</td>
+                <td>{{ entry['latitude'] }}</td>
+                <td>{{ entry['longitude'] }}</td>
+                <td>{{ entry['depth'] }}</td>
+                <td>{{ entry['mag'] }}</td>
+                <td>{{ entry['net'] }}</td>
+                <td>{{ entry['id'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <a href="{{ url_for('search') }}">Back to Search</a>
+</body>
+</html>

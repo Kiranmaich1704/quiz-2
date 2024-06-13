@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Earthquake Database</title>
+</head>
+<body>
+    <h1>Earthquake Database</h1>
+    <ul>
+        <li><a href="{{ url_for('search') }}">Search Earthquakes</a></li>
+        <li><a href="{{ url_for('delete_entries') }}">Delete Entries</a></li>
+        <li><a href="{{ url_for('create_entry') }}">Create Entry</a></li>
+        <li><a href="{{ url_for('modify_entry') }}">Modify Entry</a></li>
+        <li><a href="{{ url_for('uploadcsv') }}">Upload CSV</a></li>
+        <li><a href="{{ url_for('display_entries') }}">Display Entries</a></li>
+    </ul>
+</body>
+</html>

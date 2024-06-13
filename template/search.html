@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Earthquakes</title>
+</head>
+<body>
+    <h1>Search Earthquakes</h1>
+    <form action="{{ url_for('search') }}" method="post">
+        <label for="latitude">Latitude:</label>
+        <input type="text" id="latitude" name="latitude" required>
+        <br>
+        <label for="degrees">Degrees:</label>
+        <input type="text" id="degrees" name="degrees" required>
+        <br>
+        <input type="submit" value="Search">
+    </form>
+    {% if error_message %}
+    <p>{{ error_message }}</p>
+    {% endif %}
+</body>
+</html>
